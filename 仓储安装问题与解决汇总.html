@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>仓储</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>有关粮库害虫管理项目的总结</h1>
+<h2>技术架构</h2>
+<pre><code>后端：spring mvc+hibernate+jpa（eclipse mars）
+前端：json+jquery
+数据库：mysql（powerdesigner）
+</code></pre>
+
+<h2>配置环境问题汇总</h2>
+<h3>解决从以下三个方面入手</h3>
+<p>1.项目自身（项目红叉）<a href="http://www.cnblogs.com/pszw/p/3677530.html">http://www.cnblogs.com/pszw/p/3677530.html</a></p>
+<pre><code>检查工程以前编译的情况
+右击web工程-》Build Path-》Java Build Path-&gt;Libraries-Add Libray
+(1)--JRE System（改为当前系统jdk版本）
+(2)--Apache Tomcat（改为当前tocat版本）
+order and export 不能引入多余的library
+
+右击web工程-》Build Path-》server-&gt;
+选择当前主机所有的server
+</code></pre>
+
+<p>2.eclipse
+问题：The superclass &quot;javax.servlet.http.HttpServlet&quot; was not found on the Java Build Path，<a href="http://zhidao.baidu.com/link?url=twjf5YwE8eZjM2b9ahWMoqh6PV4q6BRRqTzhlAxmaGj5xTtu_3ccA5nbdle_o5kRGXM1pD51v31WJFhvMZ5s6iYi0rvC3D6ryodG04h21bW">jsp页面顶端红色报警</a>
+jsp头部&lt;@page&gt;出现红<a href="http://jingyan.baidu.com/article/7f766dafbb5cf34101e1d0d8.html">色警告解决</a></p>
+<pre><code>有关eclipse的设置都在windows下
+一定要先配好jdk和server
+下面是具体的解决方法：
+1、右击web工程-》属性或Build Path-》Java Build Path-&gt;Libraries-Add Libray...-&gt;Server Runtime -》Tomcat Server
+2、切换到Java Build Path界面中的Orader and Export，选择Tomcat。
+</code></pre>
+
+<p>问题：Access restriction: The type Resource is not accessible due to restriction on required library
+原因：jre不对需要重新导入</p>
+<p>如果工程打开，所有的jsp中文乱码</p>
+<ul>
+<li>
+<p>解决方法1.(所有项目都有问题)</p>
+<p>设置工作空间编码
+在window-preference-general-workspace设置编码格式<a href="http://jingyan.baidu.com/article/870c6fc325a691b03fe4beac.html">http://jingyan.baidu.com/article/870c6fc325a691b03fe4beac.html</a>	</p>
+</li>
+<li>
+<p>解决方法2.(只有单个项目有问题)</p>
+<p>只改项目编码
+<a href="http://jingyan.baidu.com/article/870c6fc325a691b03fe4beac.html">项目右击-properties-resource</a></p>
+</li>
+</ul>
+<p>3.兼容性</p>
+<p>问题：Description  Resource Path Location Type Java compiler level does not match the version of the installed Java project facet.
+原因：eclipse/myeclipse的jdk编译版本与出现问题的项目JDK编译版本不一致所导致!</p>
+<p><a href="http://jingyan.baidu.com/article/95c9d20da3ec5fec4e756186.html">解决：</a></p>
+<p>（1）.先改eclipse的jdk为1.7</p>
+<pre><code>windows---preferences---java--compiler
+</code></pre>
+
+<p>（2）.改项目的编译器版本</p>
+<pre><code>进入项目--properties---java Compiler 
+进入项目--properties---project facets
+</code></pre>
+
+<p>问题：Project facet Java version 1.7 is not supported.<br />
+原因：说明项目是其他版本jdk编译的，在eclipse里运行时会报版本不支持。
+<a href="http://blog.163.com/zhengjiu_520/blog/static/35598306201218420230/">解决：</a>
+4.tomcat:</p>
+<p>问题1：启动超时
+	<img src="http://dl.iteye.com/upload/attachment/486139/04990bd4-7086-30f5-837d-e462595e367c.png" /></p>
+<ul>
+<li>
+<p>解决1：<a href="http://youngxu.iteye.com/blog/1055028">界面中改tomcat配置问题</a></p>
+</li>
+<li>
+<p>解决2：<a href="http://zhidao.baidu.com/link?url=GhFTJFqjmbl5onUFo_8Q3iw6kBSb6Ez4z3C-HTMF33aSljZfj6WYQg2xG0cLsWghooHcaPE4VAchMPu_pb9NvK">tomcat配置文件中</a></p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>修改 workspace.metadata.plugins\org.eclipse.wst.server.core\servers.xml文件
+把 start-timeout=&quot;45&quot; 改为  start-timeout=&quot;1000&quot; 或者更长</li>
+</ul>
+</blockquote>
+<p>问题2(尚未解决)：警告: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.j2ee.server:XXXXX' did not find a mat</p>
+<p>解决：勾选选项server options</p>
+<p>5.apache</p>
+<p>（1）问题：Apache Tomcat 6.0 is not defined
+决解:原因在以前的eclipse及开发环境上运行会生成有关以前环境的信息，换了环境当然不适用，<a href="http://jingyan.baidu.com/article/ce09321b479d102bfe858f66.html">解决参考</a></p>
+<p>（2）navicat无法成功执行sql文件的：
+connet your own database.rember to change graininsects.properties.about jdbc's user and password
+1、先新建数据库。
+2、连接
+3.加载sql</p>
+<p>(3)转载:警告: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting ...
+<a href="http://blog.sina.com.cn/s/blog_6cd73dfb0100ywf6.html">解决</a></p>
+<p>6.mysql</p>
+<p>问题： Access denied for user 'root'@'localhost' (using password: NO)
+解决：
+<code>http://www.cnblogs.com/kerrycode/p/4368312.html</code>：原因：当前root被拒绝，密码没有，在jdbc连接时可能会被拒绝，重置密码或新建用户权限，在配置文件grain.properties找到jdbc相关访问地址，连接用户等
+问题：
+<a href="http://jingyan.baidu.com/article/0320e2c198ad5f1b87507bc8.html">修改root密码：</a></p>
+<p>jdk版本和tomcat版本无关
+    tomcat7需要至少1.6及其以上的jdk版本，但是你1.7的jdk就不存在说用什么版本的tomcat了，都可以用，现在最稳定的还是tomcat6</p>
+<p>navigate 导入.sql文件失败：
+解决：一定要先建立该数据库，然后连接，最后导入该.sql文件</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
